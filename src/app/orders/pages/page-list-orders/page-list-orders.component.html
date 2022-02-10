@@ -9,7 +9,7 @@
       <td>{{ order.tjmHt | currency }}</td>
       <td>{{ order.tjmHt | total : order.nbJours | currency }}</td>
       <td>{{ order.tjmHt | total : order.nbJours : order.tva | currency }}</td>
-      <td>
+      <td [appState]="order.state">
         <select (change)="changeState(order, $event)">
           <option *ngFor="let state of states" [value]="state" [selected]="order.state === state">
             {{ state }}
