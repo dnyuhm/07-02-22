@@ -1,7 +1,7 @@
 <table class="table">
   <thead>
     <tr>
-      <th *ngFor="let header of headers" scope="col">{{ header }}</th>
+      <th *ngFor="let header of headers" scope="col">{{ header | titlecase }}</th>
     </tr>
   </thead>
   <tbody>
