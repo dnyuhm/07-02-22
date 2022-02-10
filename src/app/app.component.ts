@@ -11,6 +11,7 @@ export class AppComponent {
   private obs: Observable<any>;
   private subj: Subject<any>;
   private behav: BehaviorSubject<any>;
+  // private sub: Subscription;
 
   constructor() {
     this.title = 'crm';
@@ -19,6 +20,8 @@ export class AppComponent {
     });
     this.subj = new Subject();
     this.behav = new BehaviorSubject('toto');
+    // unsubscribe
+    // this.sub = this.behav.subscribe((data) => console.log(data));
 
     // OBSERVABLE(froid)[unicast]>plusieurs instances du même flux de données
     // this.obs.subscribe((data) => console.log(data));
@@ -37,6 +40,9 @@ export class AppComponent {
     // this.behav.next('tutu');
     // this.behav.subscribe((data) => console.log(data));
     // this.behav.next(Math.random());
-    // this.behav.subscribe((data) => console.log(data));
   }
+
+  // ngOnDestroy(): void {
+  //   this.sub.unsubscribe();
+  // }
 }

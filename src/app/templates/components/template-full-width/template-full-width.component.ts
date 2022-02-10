@@ -10,14 +10,6 @@ export class TemplateFullWidthComponent implements OnInit {
 
   constructor() {
     this.title = 'Le titre est ici';
-    console.log(this.title);
   }
-
-  ngOnChanges(): void {
-    console.log(this.title);
-  }
-
-  ngOnInit(): void {
-    console.log(this.title);
-  }
+  ngOnInit(): void {}
 }
