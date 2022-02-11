@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { StateOrder } from 'src/app/core/enums/state-order';
 import { Order } from 'src/app/core/models/order';
-import { isMethodDeclaration } from 'typescript';
 import { OrdersService } from '../../services/orders.service';
 
 @Component({
